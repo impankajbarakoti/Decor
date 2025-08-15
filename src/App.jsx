@@ -8,8 +8,9 @@ import About from "./components/pages/About";
 import LatestAndSidebar from "./components/LatestAndSidebar";
 import Contactus from "./components/pages/Contactus";
 import Blogs from "./components/Blogs";
-// import BlogDetails from "./components/pages/Blogdetails";
 import BlogDetails from "./components/pages/Blogdetails";
+
+
 
 
 const App = () => {
