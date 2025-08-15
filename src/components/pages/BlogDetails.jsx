@@ -3,7 +3,7 @@ import React from "react";
 import { useLocation, useParams, useNavigate } from "react-router-dom";
 import BlogsData from "./BlogsData";
 
-const BlogDetail = () => {
+const BlogDetails = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { id } = useParams();
@@ -160,4 +160,4 @@ const BlogDetail = () => {
   );
 };
 
-export default BlogDetail;
+export default BlogDetails;
