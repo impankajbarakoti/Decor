@@ -1,6 +1,6 @@
 import React from "react";
 import FeaturedPosts from "./FeaturedPosts";
-
+import img1 from "../assets/img 1.webp"
 const Hero = () => {
   return (
     <div className="min-h-screen bg-stone-100 p-4">
@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="w-full lg:w-2/3">
           <div className="relative rounded-xl overflow-hidden shadow-xl h-full">
             <img
-              src="https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2"
+              src={img1}
               alt="Design of the Week: Renovated Barn"
               className="w-full h-[500px] md:h-[600px] lg:h-full object-cover"
             />

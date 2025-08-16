@@ -1,5 +1,15 @@
 
 import React from "react";
+import img6 from "../assets/img 6.webp"
+import img2 from "../assets/img 2.webp"
+import img8 from "../assets/img 8.webp"
+import img3 from "../assets/img 3.webp"
+import img10 from "../assets/img 10.webp"
+import img11 from "../assets/img 11.webp"
+import img18 from "../assets/img 18.webp"
+import img19 from "../assets/img 19.webp"
+import img9 from "../assets/img 9.webp"
+import img21 from "../assets/img 21.webp"
 
 const LatestPosts = () => {
   const posts = [
@@ -9,7 +19,7 @@ const LatestPosts = () => {
       excerpt:
         "Spend your dollars on the things that will make your bedroom instantly look more mature. Here are my three tips for achieving the big girl bedroom of your dreams.",
       image:
-        "https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        img6,
       date: "DECEMBER 1, 2024",
       category: "HOUSES",
     },
@@ -18,7 +28,7 @@ const LatestPosts = () => {
       title:
         "Modern Interior Design: 10 Best Tips for Creating Beautiful Interiors",
       image:
-        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2",
+        img2,
       date: "DECEMBER 1, 2024",
       category: "DECOR & ADVICE",
     },
@@ -26,7 +36,7 @@ const LatestPosts = () => {
       id: 3,
       title: "Monochromatic Living Room Ideas",
       image:
-        "https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2",
+        img8,
       date: "DECEMBER 1, 2024",
       category: "DECOR & ADVICE",
     },
@@ -34,7 +44,7 @@ const LatestPosts = () => {
       id: 4,
       title: "Minimalist Interior Design Ideas",
       image:
-        "https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2",
+        img3,
       date: "DECEMBER 1, 2024",
       category: "INSPIRATION",
     },
@@ -42,12 +52,13 @@ const LatestPosts = () => {
       id: 5,
       title: "Modern Hallway Design Ideas",
       image:
-        "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&dpr=2",
+        img10,
       date: "DECEMBER 1, 2024",
       category: "INTERIORS",
     },
   ];
-
+ 
+  
   const morePosts = [
     {
       id: 6,
@@ -55,7 +66,7 @@ const LatestPosts = () => {
       excerpt:
         "When it comes to decorating, Amy Carrillo believes a house is not a home until you add the pieces that truly matter to you.",
       image:
-        "https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+       img11,
       date: "FEBRUARY 8, 2025",
       category: "INTERIORS",
       author: "cmsmasters",
@@ -64,7 +75,7 @@ const LatestPosts = () => {
       id: 7,
       title: "Decorating with Natural Tones",
       image:
-        "https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+       img18,
       date: "FEBRUARY 5, 2025",
       category: "DECOR & ADVICE",
     },
@@ -72,7 +83,7 @@ const LatestPosts = () => {
       id: 8,
       title: "Creating a Cozy Reading Nook",
       image:
-        "https://images.pexels.com/photos/1571470/pexels-photo-1571470.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+       img19,
       date: "FEBRUARY 3, 2025",
       category: "INSPIRATION",
     },
@@ -80,7 +91,7 @@ const LatestPosts = () => {
       id: 9,
       title: "Color Blocking in Small Spaces",
       image:
-        "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        img9,
       date: "FEBRUARY 1, 2025",
       category: "HOUSES",
     },
@@ -88,7 +99,7 @@ const LatestPosts = () => {
       id: 10,
       title: "How to Mix Vintage with Modern",
       image:
-        "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        img21,
       date: "JANUARY 28, 2025",
       category: "INTERIORS",
     },
@@ -114,7 +125,7 @@ const LatestPosts = () => {
           <img
             src={featuredPost.image}
             alt={featuredPost.title}
-            className="w-full h-[28rem] sm:h-[30rem] object-cover"
+            className="w-full h-[28rem] sm:h-[30rem] object-contain"
           />
           <div className="absolute inset-0 bg-black bg-opacity-30" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 text-white">
@@ -141,7 +152,7 @@ const LatestPosts = () => {
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-auto sm:h-80 object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="space-y-3">
@@ -229,3 +240,8 @@ const LatestPosts = () => {
 };
 
 export default LatestPosts;
+
+
+
+
+

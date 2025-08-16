@@ -1,5 +1,9 @@
 import React from "react";
-import my from "../assets/img 11.webp";
+import my from "../assets/img 21.webp";
+import new1 from "../assets/new1.webp"
+import new2 from "../assets/new2.jpeg"
+import new3 from "../assets/new3.jpeg"
+import new4 from "../assets/new4.jpeg"
 
 const DesignProjects = () => {
   const projectLinks = [
@@ -15,25 +19,25 @@ const DesignProjects = () => {
       title: "Budget Ideas",
       subtitle: "Rooms, DIYs, hacks and all things thrift",
       image:
-        "https://images.pexels.com/photos/6782567/pexels-photo-6782567.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        new1,
     },
     {
       title: "Biggest Design Mistakes",
       subtitle: "Things you'll want to avoid",
       image:
-        "https://images.pexels.com/photos/6782342/pexels-photo-6782342.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        new2,
     },
     {
       title: "Design Trends",
       subtitle: "That we just can't stop talking about",
       image:
-        "https://images.pexels.com/photos/6782370/pexels-photo-6782370.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        new3,
     },
     {
       title: "Home Makeovers",
       subtitle: "Who doesn't like a good before & after?",
       image:
-        "https://images.pexels.com/photos/6782438/pexels-photo-6782438.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+        new4,
     },
   ];
 

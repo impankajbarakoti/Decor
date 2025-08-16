@@ -1,6 +1,11 @@
 import React from "react";
 import { Search, Instagram, Facebook, Twitter, Youtube } from "lucide-react";
-
+import img12 from "../assets/img 12.webp";
+import img13 from "../assets/13.webp";
+import img14 from "../assets/img 14.webp";
+import img15 from "../assets/img 15.webp";
+import img16 from "../assets/img 16.webp";
+import img17 from "../assets/img 17.webp";
 const SideBar = () => {
   const categories = [
     "DECORATION",
@@ -11,12 +16,12 @@ const SideBar = () => {
   ];
 
   const instagramPosts = [
-    "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
-    "https://images.pexels.com/photos/2343468/pexels-photo-2343468.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
-    "https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
-    "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
-    "https://images.pexels.com/photos/6707628/pexels-photo-6707628.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
-    "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2",
+    img12,
+    img13,
+    img14,
+    img15,
+    img16,
+    img17,
   ];
 
   return (
