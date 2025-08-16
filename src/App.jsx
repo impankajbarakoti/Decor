@@ -11,6 +11,7 @@ import Blogs from "./components/Blogs";
 
 // import Blogdetails from "./components/pages/Blogdetails";
 import BlogDls from "./components/pages/BlogDls";
+import ScrollToTop from "./components/pages/ScrollToTop";
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
   return (
     // <Router>
     <div>
+      <ScrollToTop/>
       {/* <Header /> */}
       {/* <Hero/> */}
       {/* <LatestAndSidebar /> */}
