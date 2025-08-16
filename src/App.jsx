@@ -9,7 +9,8 @@ import LatestAndSidebar from "./components/LatestAndSidebar";
 import Contactus from "./components/pages/Contactus";
 import Blogs from "./components/Blogs";
 
-import Blogdetails from "./components/pages/Blogdetails";
+// import Blogdetails from "./components/pages/Blogdetails";
+import BlogDls from "./components/pages/BlogDls";
 
 
 
@@ -38,9 +39,10 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/blog" element={<Blogs />} />
-        <Route path="/blog/:id" element={<Blogdetails />} />
+        {/* <Route path="/blog/:id" element={<Blogdetails />} /> */}
+        <Route path="/blog/:id" element={<BlogDls/>}/>
 
-        {/* <Route path="/about" element={} /> */}
+    
       </Routes>
 
       <Footer />
