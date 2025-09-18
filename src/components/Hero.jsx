@@ -3,7 +3,7 @@ import FeaturedPosts from "./FeaturedPosts";
 import img1 from "../assets/img 1.webp"
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-stone-100 p-4">
+    <div className="min-h-screen mt-20 bg-stone-100 p-4">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10">
         {/* Left: Hero Section */}
         <div className="w-full lg:w-2/3">

@@ -15,7 +15,7 @@ const BlogsData = [
     title: "Understanding Financial Planning",
     excerpt: "Learn the basics of financial planning to secure your future...",
     content:
-      "Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.",
+      "Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.Financial planning involves setting financial goals, evaluating current assets and liabilities, and developing strategies to achieve short and long-term objectives. It includes budgeting, investing, risk management, and retirement planning.",
     image: blog1,
   },
   {

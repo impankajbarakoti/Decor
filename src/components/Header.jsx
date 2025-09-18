@@ -1,96 +1,138 @@
+import React, { useState, useEffect } from "react";
 
-import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-
-const Header = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = [
-    { label: "HOME", href: "/" },
-    { label: "ABOUT", href: "/about" }, 
-    { label: "BLOG", href: "/blog" },
-    { label: "CONTACT", href: "/contact" },
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blogs", href: "/blogs" },
   ];
 
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-stone-50 border-b border-stone-200">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Logo */}
-        <div className="text-center py-8">
-          <h1 className="text-4xl md:text-5xl tracking-[0.3em] font-light text-stone-800">
-            INTERIOCITY
-          </h1>
-        </div>
+    <nav
+      className={`fixed w-full top-0 z-50 flex justify-between items-center px-6 md:px-12 py-4 transition-all duration-300 ease-in-out ${
+        isScrolled ? "bg-white shadow-md" : ""
+      }`}
+    >
+      {/* Logo */}
+      <div className="flex items-center">
+        <a href="/">
+          <img
+            src="https://interiocity.cmsmasters.net/interiocity/wp-content/uploads/sites/2/2024/04/logo-2.svg"
+            alt="Logo"
+            className="w-36 md:w-52"
+          />
+        </a>
+      </div>
 
-        {/* Hamburger & Navigation */}
-        <div className="flex justify-center">
-          {/* Hamburger button - visible on small screens only */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-pitchBlack p-2 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-8 h-8 fill-current"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+      {/* Desktop Navigation Links */}
+      <ul className="hidden md:flex space-x-6 text-base md:text-lg font-semibold">
+        {navLinks.map((link) => (
+          <li key={link.name}>
+            <a
+              href={link.href}
+              className={`relative transition duration-300 pb-1 
+                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+                after:w-0 after:transition-all after:duration-300 hover:after:w-full
+                ${
+                  isScrolled
+                    ? "text-black after:bg-black hover:text-red-500"
+                    : "text-black after:bg-black hover:text-red-500"
+                }`}
             >
-              {isOpen ? (
-                // Close icon (X)
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M18.364 5.636a1 1 0 00-1.414-1.414L12 9.172 7.05 4.222a1 1 0 00-1.414 1.414L10.828 12l-5.192 5.192a1 1 0 001.414 1.414L12 14.828l4.95 4.95a1 1 0 001.414-1.414L13.172 12l5.192-5.192z"
-                />
-              ) : (
-                // Hamburger icon
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+              {link.name}
+            </a>
+          </li>
+        ))}
+      </ul>
 
-        {/* Navigation - horizontal on md+ */}
-        <nav
-          className={`${
-            isOpen ? "block" : "hidden"
-          } md:block pb-6`}
+      {/* Desktop CTA Button */}
+      <div className="hidden md:block">
+        <a href="/contact">
+          <button className="bg-black text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-stone-700 hover:scale-105 transition-all focus:outline-none focus:ring-0">
+            Contact Us
+          </button>
+        </a>
+      </div>
+
+      {/* Mobile Menu Toggle */}
+      <div className="md:hidden">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="focus:outline-none"
         >
-          <ul className="flex flex-col md:flex-row justify-center md:space-x-12 space-y-4 md:space-y-0 text-center">
-            {navItems.map((item, index) => (
-              <li key={index} className="relative group">
-                {/* Update the <a> tag to <Link> for routing */}
-                <Link
-                  to={item.href}
-                  className="text-stone-600 text-lg tracking-wide hover:text-stone-800 transition-colors duration-200 flex items-center justify-center"
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="absolute top-full left-0 w-full bg-white  shadow-md md:hidden z-10">
+          <ul className="flex flex-col space-y-4 px-6 py-4 text-base font-semibold">
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <a
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="relative text-black hover:text-yellow-500 transition duration-300 pb-1
+                    after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] 
+                    after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <svg
-                      className="w-4 h-4 ml-2"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z
-                        clipRule=evenodd"
-                      />
-                    </svg>
-                  )}
-                </Link>
+                  {link.name}
+                </a>
               </li>
             ))}
+            <li>
+              <a href="/contact">
+                <button className="bg-black text-white font-semibold px-6 py-3 w-full shadow-md hover:scale-105 transition-transform">
+                  Contact Us
+                </button>
+              </a>
+            </li>
           </ul>
-        </nav>
-      </div>
-    </header>
+        </div>
+      )}
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;

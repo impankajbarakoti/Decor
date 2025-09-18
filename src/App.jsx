@@ -20,7 +20,7 @@ const App = () => {
   return (
     // <Router>
     <div>
-      <ScrollToTop/>
+      <ScrollToTop/> 
       {/* <Header /> */}
       {/* <Hero/> */}
       {/* <LatestAndSidebar /> */}
@@ -40,7 +40,7 @@ const App = () => {
 
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contactus />} />
-        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blogs" element={<Blogs />} />
         {/* <Route path="/blog/:id" element={<Blogdetails />} /> */}
         <Route path="/blog/:id" element={<BlogDls/>}/>
 

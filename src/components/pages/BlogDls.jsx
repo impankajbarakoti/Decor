@@ -29,7 +29,7 @@ const BlogDls = () => {
   const moreBlogs = hasLatest ? randomBlogs.slice(0) : []; // show all picked ones in "More Blogs"
 
   return (
-    <div className="min-h-screen bg-stone-100">
+    <div className="min-h-screen mt-20 bg-stone-100">
       {/* Header */}
       <section className="py-4 px-2 text-center text-black">
         <h1 className="text-2xl sm:text-3xl font-bold">Blog Details</h1>
